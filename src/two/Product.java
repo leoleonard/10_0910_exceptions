@@ -2,10 +2,10 @@ package two;
 
 public class Product {
     private String name;
-    private String cena;
+    private double cena;
     private String producent;
 
-    public Product(String name, String cena, String producent) {
+    public Product(String name, double cena, String producent) {
         this.name = name;
         this.cena = cena;
         this.producent = producent;
@@ -19,11 +19,11 @@ public class Product {
         this.name = name;
     }
 
-    public String getCena() {
+    public double getCena() {
         return cena;
     }
 
-    public void setCena(String cena) {
+    public void setCena(double cena) {
         this.cena = cena;
     }
 
