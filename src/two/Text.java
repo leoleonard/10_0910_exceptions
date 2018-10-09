@@ -1,8 +1,6 @@
 package two;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Text {
@@ -17,17 +15,30 @@ public class Text {
 //        File file = new File("test.text");
 //        if(!file.exists())
 //            file.createNewFile();
+//
+        //wczytaj plik 1 sposob
+//        try {
+//            Scanner scanner = new Scanner(file);
+//            while (scanner.hasNextLine()) {
+//
+//                String line = scanner.nextLine();
+//                System.out.println(line);
+//
+//            }
+//        } catch (FileNotFoundException e) {
+//            System.out.println("Plik nie istnieje");
+//        }
 
-        try {
-            Scanner scanner = new Scanner(file);
-            while (scanner.hasNextLine()) {
 
-                String line = scanner.nextLine();
-                System.out.println(line);
+        //2 sposob
+        FileReader fileReader = new FileReader(file);
 
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Plik nie istnieje");
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+        String line = bufferedReader.readLine();
+        while (line != null) {
+            System.out.println(line);
+            line = bufferedReader.readLine();
         }
     }
 
