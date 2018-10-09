@@ -1,0 +1,1 @@
+nazwa1;producent1;cena1nazwa2;producent3;cena2nazwa3;producent3;cena3
