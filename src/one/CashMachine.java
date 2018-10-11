@@ -7,14 +7,14 @@ public class CashMachine {
         BankAccount bankAccount = new BankAccount(new Person(), 1000, 500);
 
         Scanner scanner = new Scanner(System.in);
-
-
         boolean finish = false;
-        do {
-            System.out.println("1 - wplata");
-            System.out.println("2 - wyplata");
-            System.out.println("3 - koniec");
 
+        do {
+            System.out.println("Co chcesz zrobić?");
+            System.out.println("1: wplata");
+            System.out.println("2: wyplata");
+            System.out.println("3: koniec");
+            System.out.println("4: saldo");
 
             int selection = scanner.nextInt();
 
@@ -24,14 +24,17 @@ public class CashMachine {
                     System.out.println("Ile chcesz wpłacić?");
                     double amount = scanner.nextDouble();
                     bankAccount.deposit(amount);
+                    System.out.println("Obecny stan konta to: " + bankAccount.getMoney());
                     break;
                 case 2:
                     //wyplata
                     boolean finishWithDraw = false;
+
                     do {
 
                         System.out.println("Ile chcesz wypłacić? 0 -> wyjście");
                         double withdrawAmount = scanner.nextDouble();
+
 
                         if (withdrawAmount == 0) {
                             break;
@@ -47,6 +50,11 @@ public class CashMachine {
                         }
                     } while (!finishWithDraw);
 
+                    System.out.println("Obecny stan konta to: " + bankAccount.getMoney());
+                    break;
+
+                case 4:
+                    System.out.println("Obecny stan konta to: " + bankAccount.getMoney());
                     break;
 
                 case 3:
