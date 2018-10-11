@@ -10,9 +10,6 @@ public class BankAccount {
         return money;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
-    }
 
     public BankAccount(Person person, double money, double limit) {
         if (person == null) {

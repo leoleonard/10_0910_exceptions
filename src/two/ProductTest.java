@@ -10,7 +10,7 @@ public class ProductTest {
         product[1] = new Product("komputer", 2000, "dell");
         product[2] = new Product("chleb", 7, "ziarno");
 
-        File file = new File("product.txt");
+        File file = new File("one.txt");
         try {
             boolean newFile = file.createNewFile();
         } catch (IOException e) {
@@ -20,7 +20,7 @@ public class ProductTest {
 
 
         try {
-            FileWriter fileWriter = new FileWriter("product.txt");
+            FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bfw = new BufferedWriter(fileWriter);
 
             for (Product product1 : product) {

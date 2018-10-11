@@ -1,0 +1,3 @@
+biurko;ikea;
+komputer;dell;
+chleb;ziarno;
